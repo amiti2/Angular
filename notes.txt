@@ -1,0 +1,11 @@
+1. typescript is superscript of javascript
+2. packages.json contains dependencies which are required to run project correctly
+3. node_modules folder is place where the dependencies are actually installed.
+4. Angular is JS framework which changes DOM at runtime.
+5. Main idea of angular is to build components that have their HTML, css and logic. (it promotes reusability) . we can use that component more than once.
+6. AppComponent is special component.
+7. angular uses components to build web pages and uses module to bundle different components (pieces) into packages.
+
+property binding []
+string interpolation {{  **any valid type script code ** }}
+event binding (**any valid typescript expression**)

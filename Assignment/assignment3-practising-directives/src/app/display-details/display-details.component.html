@@ -2,5 +2,5 @@
 <p  *ngIf="showHide">Learning Angular</p>
 
 <div *ngFor="let count of counter">
-   added
+   <p [ngClass]="{'blue': this.counter.length > 5}">added</p>
 </div>

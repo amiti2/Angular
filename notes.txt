@@ -6,6 +6,10 @@
 6. AppComponent is special component.
 7. angular uses components to build web pages and uses module to bundle different components (pieces) into packages.
 
-property binding []
+property binding [**directive**,**property**] = valid type script code
 string interpolation {{  **any valid type script code ** }}
 event binding (**any valid typescript expression**)
+
+#localreference
+structuralDirective *ngIF
+attributeDirective ngStyle

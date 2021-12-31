@@ -1,6 +1,8 @@
 <button class="button"(click)="toggleDisplay()">Display Details</button>
 <p  *ngIf="showHide">Learning Angular</p>
 
-<div *ngFor="let count of counter"  [ngStyle]="{'backgroundColor': count >5?'blue':'transparent'}" [ngClass]="{'white': count > 5}">{{count}}
+<div *ngFor="let count of counter;let i=index"
+  [ngStyle]="{'backgroundColor': i >5?'blue':'transparent'}" 
+  [ngClass]="{'white': i > 5}">{{count}}
    <!-- <p [ngClass]="{'blue': this.counter.length > 5}">{{count}}</p> -->
 </div>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayDetailsComponent implements OnInit {
   
-  counter:number[]=[];
+  counter:Date[]=[];
   constructor() { }
   showHide = false;
   ngOnInit(): void {
@@ -15,7 +15,8 @@ export class DisplayDetailsComponent implements OnInit {
 
   toggleDisplay()
   {
-     this.counter.push(this.counter.length+1);
+    // this.counter.push(this.counter.length+1);
+    this.counter.push(new Date());
      this.showHide = !this.showHide;
   }
 

@@ -1,0 +1,8 @@
+<app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+<div class="col-xs-6 pull-left" >
+    <app-even  *ngFor="let number of evenNumbers"  [number]="number"></app-even>
+</div>
+
+<div class="col-xs-6 pull-right">
+    <app-odd #oddControl *ngFor="let number of oddNumbers" [number]="number"></app-odd>    
+</div>

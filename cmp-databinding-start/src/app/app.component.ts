@@ -24,5 +24,13 @@ onBlueprintAddded(blueprint:{bpName:string, bpContent:string}) {
     content: blueprint.bpContent
   });
 }
-  
+  onChangeFirst()
+  {
+    this.serverElements[0].name='changed';
+  }
+
+  onDestroy()
+  {
+    this.serverElements.splice(0,1);
+  }
 }

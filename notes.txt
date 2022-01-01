@@ -13,3 +13,5 @@ event binding (**any valid typescript expression**)
 #localreference
 structuralDirective *ngIF
 attributeDirective ngStyle
+
+ng g c server-elements --skip-tests

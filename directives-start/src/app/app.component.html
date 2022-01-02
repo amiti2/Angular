@@ -1,0 +1,40 @@
+<div class="container">
+
+<div *ngIf="getValue">
+
+  show
+</div>
+<ng-template [appAppUnless]="getValue">
+  <div>
+    Show ff
+  </div>
+</ng-template>
+
+
+<div [ngSwitch]="testValue">
+  <li *ngSwitchCase="5">Hi I m 5</li> 
+  <li *ngSwitchCase="10">Hi I m 10</li>
+  <li *ngSwitchCase="100">Hi I m 100</li>
+  <li *ngSwitchCase="1005">Hi I m 1005</li>
+  <li *ngSwitchDefault>Hi I have no value</li>
+</div>
+
+  <p appBasicHighlight>Paint me green!</p>
+  <p [appBetterHighlight]="'green'" defaultColor="yellow" >Highlight with renderer</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <li
+          class="list-group-item">
+        </li>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

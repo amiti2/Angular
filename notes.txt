@@ -15,3 +15,4 @@ structuralDirective *ngIF
 attributeDirective ngStyle
 
 ng g c server-elements --skip-tests
+angular gives same attribute to all elements in the component

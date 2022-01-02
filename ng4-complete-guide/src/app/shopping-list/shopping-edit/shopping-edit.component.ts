@@ -14,11 +14,17 @@ export class ShoppingEditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  AddToRecipes()
+  onAddItem()
   {
     const name = this.nameControl.nativeElement.value;
     const amount = this.amountControl.nativeElement.value;
     const newIngredient:Ingredient = new Ingredient(name,amount);     
     this.ingredientAdded.emit(newIngredient);
+  }
+
+  onAddItemTemplate(name,amount)
+  {
+  console.log(name.value);
+  console.log(amount.value);
   }
 }

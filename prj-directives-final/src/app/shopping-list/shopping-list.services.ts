@@ -1,8 +1,11 @@
-import { i18nMetaToJSDoc } from "@angular/compiler/src/render3/view/i18n/meta";
-import { Ingredient } from "../shared/ingredient.model";
 
+import { Ingredient } from "../shared/ingredient.model";
+import { EventEmitter } from '@angular/core'
 export class ShoppingListService
 {
+
+    ingredientsAdded = new EventEmitter<Ingredient[]>();
+
   private  ingredients: Ingredient[] = [
         new Ingredient('Apples', 5),
         new Ingredient('Tomatoes', 10),
@@ -12,5 +15,11 @@ export class ShoppingListService
       getIngredients()
       {
           return this.ingredients.slice();
+      }
+
+      addIngredient(ingredient:Ingredient)
+      {
+          this.ingredients.push(ingredient);
+          this.ingredientsAdded.emit(this.ingredients);
       }
 }

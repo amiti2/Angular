@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
  
   onActivate()
  {
-   this.userService.activatedEmitter.emit(true);
+   this.userService.activatesubject.next(true);
  }
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {

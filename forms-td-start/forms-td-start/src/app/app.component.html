@@ -16,7 +16,7 @@
           <button class="btn btn-default" type="button">Suggest an Username</button>
           <div class="form-group">
             <label for="email">Mail</label>
-            <input type="email" id="email" class="form-control" ngModel  name="email" email ngNativeValidate>
+            <input type="email" id="email" class="form-control" ngModel  name="email" email required>
           </div>
         </div>
         <div class="form-group">
@@ -26,7 +26,7 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid" >Submit</button>
       </form>
     </div>
   </div>
